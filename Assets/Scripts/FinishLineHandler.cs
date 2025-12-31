@@ -1,14 +1,21 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FinishLineHandler : MonoBehaviour
 {
+    [SerializeField] float delayTime;
     void OnTriggerEnter2D(Collider2D collision)
     {
         int layerindex = LayerMask.NameToLayer("Player");
 
         if(collision.gameObject.layer == layerindex)
         {
-            print("The player has won!!");
+            Invoke("ReloadScene", delayTime);
         }
+    }
+
+    void ReloadScene()
+    {
+        SceneManager.LoadScene(0);
     }
 }
