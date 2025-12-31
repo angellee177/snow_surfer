@@ -9,8 +9,6 @@ public class CrashDetectorHandler : MonoBehaviour
     {
         int layerIndex = LayerMask.NameToLayer("Floor");
 
-        print(collision.gameObject.layer);
-
         if(collision.gameObject.layer == layerIndex)
         {
             crashParticle.Play();
