@@ -14,6 +14,7 @@ public class PlayerHandler : MonoBehaviour
     SurfaceEffector2D surfaceEffector2D;
 
     Vector2 moveVector;
+    public bool canControlPlayer = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,8 +29,11 @@ public class PlayerHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RotatePlayer();
-        BoostPlayer();
+        if(canControlPlayer)
+        {
+            RotatePlayer();
+            BoostPlayer();
+        }
     }
 
     void RotatePlayer()
@@ -61,5 +65,10 @@ public class PlayerHandler : MonoBehaviour
 
         // Keep speed within reasonable bounds
         surfaceEffector2D.speed = Mathf.Clamp(surfaceEffector2D.speed, minSpeed, maxSpeed);
+    }
+
+    public void DisableControls()
+    {
+        canControlPlayer = false;
     }
 }
