@@ -1,12 +1,25 @@
 # Snow Surfer
-🎮 [Play the game online](https://yourname.itch.io/snow-surfer)
+![](https://img.shields.io/badge/2D-orange)
+![](https://img.shields.io/badge/No--AI-blue)
+![](https://img.shields.io/badge/Singleplayer-yellow)
+![](https://img.shields.io/badge/Action-red)
+![](https://img.shields.io/badge/Arcade-blue?logo=game)
+![](https://img.shields.io/badge/Unity-6000.3.2f1--LTS-gray?logo=unity)
+![](https://img.shields.io/badge/C%23-Language-green?logo=csharp)
+![](https://img.shields.io/badge/Platform-WebGL-orange)
+
+[![Play in Browser](https://img.shields.io/badge/PLAY_NOW-Unity_Play-red?style=for-the-badge&logo=unity)](YOUR_UNITY_PLAY_URL_HERE)
+
+
 
 <img src="docs/img/..." width="240" height="400" alt="Snow Surfer gameplay">
 
 ## Description
-Snow Surfer is a 2D arcade game built in Unity that focuses on responsive movement and speed control through player input. The project uses Cinemachine for a player-follow camera, Unity’s Input System for action-based input handling, and a speed system driven by continuous input.
+Snow Surfer is a 2D arcade game built with Unity that emphasizes responsive movement and real-time speed control through keyboard input. Players influence motion dynamics using acceleration, deceleration, and capped speed limits, creating a physics-driven gameplay experience.
 
-The game also includes simple particle effects for player feedback and a basic flow to handle crash and level completion states.
+As my third Unity project, this game reflects a deeper understanding of Unity’s 2D systems and experimentation with custom mechanics such as speed boosts on collision, flip-based score multipliers, and real-time speed tracking displayed on screen.
+
+This project demonstrates my growing ability to translate gameplay ideas into functional systems using Unity.
 
 ---
 ## 🚀 Features
@@ -22,7 +35,7 @@ The game also includes simple particle effects for player feedback and a basic f
 Before you start, ensure you have the following installed:
 
 * **Unity Hub**
-* **Unity Editor 6000.3.2f1**
+* **Unity Editor 6000.3.2f1 LTS**
 * **Git LFS** (Required for large library files)
 
 > [⚠️!IMPORTANT]
