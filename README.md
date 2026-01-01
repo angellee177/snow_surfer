@@ -1,10 +1,21 @@
 # Snow Surfer
+🎮 [Play the game online](https://yourname.itch.io/snow-surfer)
 
-<img src="docs/img/..." width="240" height="400" alt="Snow Surfer Gameplay">
+<img src="docs/img/..." width="240" height="400" alt="Snow Surfer gameplay">
 
 ## Description
+Snow Surfer is a 2D arcade game built in Unity that focuses on responsive movement and speed control through player input. The project uses Cinemachine for a player-follow camera, Unity’s Input System for action-based input handling, and a speed system driven by continuous input.
 
-....
+The game also includes simple particle effects for player feedback and a basic flow to handle crash and level completion states.
+
+---
+## 🚀 Features
+* **Player-Follow Camera**: Smooth camera tracking using Cinemachine, tuned for high-speed movement.
+* **Modern Input System**: Action-based input handling for movement and continuous speed control.
+* **Dynamic Speed Control**: Acceleration and deceleration driven by held input, with balanced speed limits.
+* **Gameplay Feedback Effects**: Event-driven particle effects triggered on crash and level completion.
+* **Level Design with Sprite Shape**: Smooth, spline-based track creation for rapid iteration and clean collisions.
+
 ---
 ## Project Setup
 
@@ -47,25 +58,4 @@ If not found, download it from [dotnet.microsoft.com](https://dotnet.microsoft.c
 > [⚠️ WARNING] <br>
 > If you see a "Safe Mode" warning or compilation errors regarding `UnityEngine.InputSystem`, go to **Window > Package Manager**, search for **Input System**, and click **Install**. Unity will restart to enable the new back-ends.
 
-## 🛠 Building for iOS (Mac Users)
-
-Generating an iOS build requires local regeneration on a Mac. Do not use build folders committed from Windows.
-
 ---
-### A. Configure Build Settings
-
-#### 1. Go to File > Build Settings and select iOS.
-![file>build_setting.png](docs/img/file%3Ebuild_setting.png)
-
-
-#### 2.Click Player Settings... > Other Settings.
-![player_setting.png](docs/img/player_setting.png)
-![other_setting.png](docs/img/other_setting.png)
-
-3. **Target SDK Selection:**
-![target_sdk.png](docs/img/target_sdk.png)
-
-* Set to **Device SDK** for a physical iPhone.
-* Set to **Simulator SDK** for the Xcode Simulator.
-4. Click **Build** and choose a folder name (e.g., `Build_iOS`).
-![build.png](docs/img/build.png)
