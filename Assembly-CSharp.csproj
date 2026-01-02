@@ -53,6 +53,7 @@
     <Compile Include="Assets/Scripts/SnowTrailHandler.cs" />
     <Compile Include="Assets/Scripts/ScoreManager.cs" />
     <Compile Include="Assets/Scripts/PlayerHandler.cs" />
+    <Compile Include="Assets/Scripts/NewScriptableObjectScript.cs" />
     <Compile Include="Assets/Scripts/CrashDetectorHandler.cs" />
   </ItemGroup>
   <ItemGroup>

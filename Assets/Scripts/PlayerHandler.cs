@@ -45,6 +45,8 @@ public class PlayerHandler : MonoBehaviour
     {
         if(canControlPlayer)
         {
+            moveVector = moveAction.ReadValue<Vector2>();
+
             RotatePlayer();
             BoostPlayer();
             CalculateFlips();
@@ -54,11 +56,12 @@ public class PlayerHandler : MonoBehaviour
 
     void RotatePlayer()
     {
-        moveVector = moveAction.ReadValue<Vector2>();
+        // Remove the ReadValue line from here to keep it clean
         if (moveVector.x < 0)
         {
             playerRigidBody.AddTorque(torqueAmount);
-        } else if(moveVector.x > 0)
+        } 
+        else if(moveVector.x > 0)
         {
             playerRigidBody.AddTorque(-torqueAmount);
         }
