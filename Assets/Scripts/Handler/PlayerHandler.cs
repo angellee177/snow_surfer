@@ -73,19 +73,14 @@ public class PlayerHandler : MonoBehaviour
         if(moveVector.y > 0)
         {
             surfaceEffector2D.speed += accelerationRate * Time.deltaTime;
-            print("speeding up!");
-            print("current speed = " + surfaceEffector2D.speed.ToString());
         } else if(moveVector.y < 0) // handle down cursor
         {
             surfaceEffector2D.speed -= accelerationRate * Time.deltaTime;            
-            print("slowing down!");
-            print("current base speed = " + surfaceEffector2D.speed.ToString());
         };
 
         // Keep speed within reasonable bounds
         surfaceEffector2D.speed = Mathf.Clamp(surfaceEffector2D.speed, minSpeed, maxSpeed);
-        speed = (int)surfaceEffector2D.speed;
-        speedText.text = "Speed: " + speed + " km/h";
+        UpdateSpeedUI();
     }
 
     void HandlePassiveScore()
@@ -100,7 +95,6 @@ public class PlayerHandler : MonoBehaviour
             {
                 scoreManager.AddScore(1);
                 passiveScore = 0; // Reset timer for the next second
-                print("Walking score added! +1");
             }
 
         }
@@ -142,5 +136,47 @@ public class PlayerHandler : MonoBehaviour
     public void DisableControls()
     {
         canControlPlayer = false;
+    }
+
+    public void ActivatePowerUp(PowerUpSO powerUp)
+    {
+        if(powerUp.GetPowerUpType() == "speed")
+        {
+            float boost = powerUp.GetValueChange();
+            baseSpeed += boost;
+            
+            surfaceEffector2D.speed += boost;
+            UpdateSpeedUI();
+
+            print("Power Up! Current speed is now: " + surfaceEffector2D.speed + " km/h");
+        } else if(powerUp.GetPowerUpType() == "torque")
+        {
+            torqueAmount += powerUp.GetValueChange();
+        }
+    }
+
+    public void DeactivedPowerUp(PowerUpSO powerUp)
+    {
+        if(powerUp.GetPowerUpType() == "speed")
+        {
+            float boost = powerUp.GetValueChange();
+            baseSpeed -= boost;
+            
+            surfaceEffector2D.speed -= boost;
+            UpdateSpeedUI();
+
+            print("Back to normal speed, Current speed is now: " + surfaceEffector2D.speed + " km/h");
+        } else if(powerUp.GetPowerUpType() == "torque")
+        {
+            torqueAmount -= powerUp.GetValueChange();
+        }
+    }
+
+    // Create a helper method for the UI
+    void UpdateSpeedUI()
+    {
+        // Cast to int for clean display
+        speed = (int)surfaceEffector2D.speed;
+        speedText.text = "Speed: " + speed + " km/h";
     }
 }

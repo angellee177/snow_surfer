@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Assets/Scripts/Handler/ScoreManager.cs" />
     <Compile Include="Assets/Scripts/Handler/PlayerHandler.cs" />
+    <Compile Include="Assets/Scripts/Handler/PowerUpManager.cs" />
     <Compile Include="Assets/Scripts/ObjectScrips/PowerUpSO.cs" />
     <Compile Include="Assets/Scripts/Handler/CrashDetectorHandler.cs" />
     <Compile Include="Assets/Scripts/Handler/SnowTrailHandler.cs" />
