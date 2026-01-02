@@ -12,6 +12,7 @@ public class PlayerHandler : MonoBehaviour
     [SerializeField] float minSpeed;
     [SerializeField] float accelerationRate; // Speed added per second held
     [SerializeField] TextMeshProUGUI speedText;
+    [SerializeField] ParticleSystem powerUpParticles;
 
 
     InputAction moveAction;
@@ -25,6 +26,7 @@ public class PlayerHandler : MonoBehaviour
     float totalRotation;
     int flipCount;
     int speed;
+    int activePowerUpCount;
 
     // calculate passive score only when player walk on the ground
     float passiveScore;
@@ -140,6 +142,10 @@ public class PlayerHandler : MonoBehaviour
 
     public void ActivatePowerUp(PowerUpSO powerUp)
     {
+        // activate the powerUp particle
+        powerUpParticles.Play();
+        activePowerUpCount += 1;
+
         if(powerUp.GetPowerUpType() == "speed")
         {
             float boost = powerUp.GetValueChange();
@@ -157,6 +163,12 @@ public class PlayerHandler : MonoBehaviour
 
     public void DeactivedPowerUp(PowerUpSO powerUp)
     {
+        activePowerUpCount -= 1;
+        if (activePowerUpCount == 0)
+        {
+            powerUpParticles.Stop();
+        }
+
         if(powerUp.GetPowerUpType() == "speed")
         {
             float boost = powerUp.GetValueChange();
