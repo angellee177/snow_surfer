@@ -49,12 +49,12 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.3.2f1/Unity.app/Contents/Resources/BuildPipeline/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/Scripts/FinishLineHandler.cs" />
-    <Compile Include="Assets/Scripts/SnowTrailHandler.cs" />
-    <Compile Include="Assets/Scripts/ScoreManager.cs" />
-    <Compile Include="Assets/Scripts/PlayerHandler.cs" />
-    <Compile Include="Assets/Scripts/NewScriptableObjectScript.cs" />
-    <Compile Include="Assets/Scripts/CrashDetectorHandler.cs" />
+    <Compile Include="Assets/Scripts/Handler/ScoreManager.cs" />
+    <Compile Include="Assets/Scripts/Handler/PlayerHandler.cs" />
+    <Compile Include="Assets/Scripts/ObjectScrips/PowerUpSO.cs" />
+    <Compile Include="Assets/Scripts/Handler/CrashDetectorHandler.cs" />
+    <Compile Include="Assets/Scripts/Handler/SnowTrailHandler.cs" />
+    <Compile Include="Assets/Scripts/Handler/FinishLineHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
