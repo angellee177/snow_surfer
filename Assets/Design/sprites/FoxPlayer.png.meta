@@ -126,15 +126,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: github_profile-2_0
+      name: FoxSprite
       rect:
         serializedVersion: 2
-        x: 40
+        x: 0
         y: 0
         width: 707
         height: 737
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5097652, y: 0.10421486}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 995d596661b92486d81147eb124fd8a6
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      github_profile-2_0: 157445301744349231
+      FoxSprite: 157445301744349231
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

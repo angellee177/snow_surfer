@@ -13,12 +13,13 @@ public class PlayerHandler : MonoBehaviour
     [SerializeField] float accelerationRate; // Speed added per second held
     [SerializeField] TextMeshProUGUI speedText;
     [SerializeField] ParticleSystem powerUpParticles;
+    [SerializeField] ScoreManager scoreManager;
+
 
 
     InputAction moveAction;
     Rigidbody2D playerRigidBody;
     SurfaceEffector2D surfaceEffector2D;
-    ScoreManager scoreManager;
 
     Vector2 moveVector;
     public bool canControlPlayer = true;
@@ -87,7 +88,7 @@ public class PlayerHandler : MonoBehaviour
 
     void HandlePassiveScore()
     {
-        if(surfaceEffector2D.speed > 1f)
+        if(scoreManager != null && surfaceEffector2D.speed > 1f)
         {
 
             // Add time passed since last frame (e.g., 0.016s)
@@ -111,7 +112,7 @@ public class PlayerHandler : MonoBehaviour
         totalRotation += delta;
 
         // Using Mathf.Abs handles both +340 and -340 in one check
-        if(Mathf.Abs(totalRotation) >= 340f)
+        if(scoreManager != null && Mathf.Abs(totalRotation) >= 340f)
         {
             flipCount += 1;
             totalRotation = 0;
@@ -128,7 +129,7 @@ public class PlayerHandler : MonoBehaviour
         int layerIndex = LayerMask.NameToLayer("Floor");
 
         // reset flip count if the player hit floor
-        if(collision.gameObject.layer == layerIndex)
+        if(scoreManager != null && collision.gameObject.layer == layerIndex)
         {
             flipCount = 0;
             scoreManager.ResetFlipUI();
