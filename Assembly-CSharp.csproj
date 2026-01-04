@@ -58,6 +58,7 @@
     <Compile Include="Assets/Scripts/Handler/CrashDetectorHandler.cs" />
     <Compile Include="Assets/Scripts/Handler/SnowTrailHandler.cs" />
     <Compile Include="Assets/Scripts/Handler/FinishLineHandler.cs" />
+    <Compile Include="Assets/Scripts/Handler/ArrowButtonHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

@@ -48,7 +48,13 @@ public class PlayerHandler : MonoBehaviour
     {
         if(canControlPlayer)
         {
-            moveVector = moveAction.ReadValue<Vector2>();
+            // Only read from moveAction if the value is not zero (keyboard/gamepad)
+            // This prevents the keyboard from "resetting" the button touch values to zero
+            Vector2 input = moveAction.ReadValue<Vector2>();
+            if (input != Vector2.zero) 
+            {
+                moveVector = input;
+            }
 
             RotatePlayer();
             BoostPlayer();
@@ -191,5 +197,11 @@ public class PlayerHandler : MonoBehaviour
         // Cast to int for clean display
         speed = (int)surfaceEffector2D.speed;
         speedText.text = "Speed: " + speed + " km/h";
+    }
+
+    public void SetMoveVector(Vector2 newVector)
+    {
+        moveVector = newVector;
+        print(moveVector);
     }
 }
