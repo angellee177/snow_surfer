@@ -8,11 +8,9 @@
 ![](https://img.shields.io/badge/C%23-Language-green?logo=csharp)
 ![](https://img.shields.io/badge/Platform-WebGL-orange)
 
-[![Play in Browser](https://img.shields.io/badge/PLAY_NOW-Unity_Play-red?style=for-the-badge&logo=unity)](YOUR_UNITY_PLAY_URL_HERE)
 
 
-
-<img src="docs/img/..." width="240" height="400" alt="Snow Surfer gameplay">
+<img src="img/snow_surfer.gif" width="240" height="400" alt="Snow Surfer gameplay">
 
 ## Description
 Snow Surfer is a 2D arcade game built with Unity that emphasizes responsive movement and real-time speed control through keyboard input. Players influence motion dynamics using acceleration, deceleration, and capped speed limits, creating a physics-driven gameplay experience.
